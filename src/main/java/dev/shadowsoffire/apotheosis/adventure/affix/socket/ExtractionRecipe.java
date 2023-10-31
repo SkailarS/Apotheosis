@@ -31,7 +31,7 @@ public class ExtractionRecipe extends ApothSmithingRecipe implements ReactiveSmi
      */
     @Override
     public boolean matches(Container pInv, Level pLevel) {
-        List<ItemStack> sockets = SocketHelper.getGems(pInv.getItem(0));
+        List<ItemStack> sockets = SocketHelper.getGems(pInv.getItem(BASE));
         return pInv.getItem(ADDITION).getItem() == Items.VIAL_OF_EXTRACTION.get() && !sockets.isEmpty() && !sockets.get(BASE).isEmpty();
     }
 
